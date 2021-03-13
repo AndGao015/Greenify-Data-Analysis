@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt 
 import matplotlib.dates as mdates
-import seaborn as sns
 from datetime import datetime
 
 # Prepares wildfire data, AQI data for processing
@@ -95,10 +94,8 @@ def display_aqi_plot(aqi_np_data, title):
         Parameters:
                 aqi_np_data (numpy array): Numpy array storing 
                                            weekly PM2.5/Ozone AQI data
-
                 title (str): String representation of Title of graph
                              (excluding "AQI vs Time")
-
     '''
     x_dates = [datetime.strptime(str(d), '%m/%d/%Y').date() for d in aqi_dates_list[0]]
     y_aqi = np.delete(aqi_np_data, 0)
@@ -139,10 +136,12 @@ def display_fire_markers(number_of_top_fires):
         fire_index += 1
     plt.legend()
 
-
+# Displays all plots on a single figure with top 5 largest fires start & end dates marked
 display_fire_markers(5)
 display_all() 
 
+# Currently CSV has data on 7 Bay Area locations listed below
+# Uncomment each to generate corresponding plots
 #display_aqi_plot(aqi_np_data[1], 'SFO-Arkansas St')
 #display_aqi_plot(aqi_np_data[2], 'San Ramon')
 #display_aqi_plot(aqi_np_data[3], 'Pleasanton-Owens Ct')
