@@ -108,13 +108,23 @@ def display_aqi_plot(aqi_np_data, title):
     fig.savefig(title + '.jpg')
 
 
-def display_all():
+def display_all(number_of_top_fires):
     '''
     Displays all weekly AQI data on single plot.
+    
+    Parameters:
+            number_of_top_fires (int): Positive, nonzero integer representing number
+                                       of top fires to generate markers for
     '''
     x_dates = [datetime.strptime(str(d), '%m/%d/%Y').date() for d in aqi_dates_list[0]]
+    fig = plt.figure()
     for i in range(1, 8):
         plt.plot(x_dates, np.delete(aqi_np_data[i], 0), linewidth=0.5)
+    display_fire_markers(number_of_top_fires)
+    fig.suptitle('All Fires AQI vs Time')
+    plt.xlabel('Time')
+    plt.ylabel('AQI Levels (PM2.5/Ozone)')
+    fig.savefig('AllFires.jpg')
     plt.show()
 
 
@@ -137,8 +147,7 @@ def display_fire_markers(number_of_top_fires):
     plt.legend()
 
 # Displays all plots on a single figure with top 5 largest fires start & end dates marked
-display_fire_markers(5)
-display_all() 
+display_all(5) 
 
 # Currently CSV has data on 7 Bay Area locations listed below
 # Uncomment each to generate corresponding plots
