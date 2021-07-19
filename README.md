@@ -18,6 +18,9 @@ Data analysis projects for the Project Greenify Foundation
 
 5. Environmental effects of Bitcoin/cryptocurrency mining
 
+### Datasets:
+
+https://tinyurl.com/greenifydatasets
 
 ### Interested in joining?
 Fill out our [volunteer form](https://www.projectgreenify.org/volunteer) and we'll get back to you ASAP!
