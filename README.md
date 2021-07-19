@@ -10,11 +10,13 @@ Data analysis projects for the Project Greenify Foundation
 
 1. Bay Area carbon monoxide emissions after the COVID-19 lockdown
 2. Comparing cleanness of hydrogen vs electric as alternative fuel sources
+3. Analyzing 2020 CA wildfires' effect on air quality across the Bay Area
+4. Determining the factors that determine a country's "greenness"
 
 
 ### Projects In-progress:
 
-3. Analyzing 2020 CA wildfires' effect on air quality across the Bay Area 
+5. Environmental effects of Bitcoin/cryptocurrency mining
 
 
 ### Interested in joining?
